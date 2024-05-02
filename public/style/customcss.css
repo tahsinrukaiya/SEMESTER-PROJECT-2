@@ -1,0 +1,193 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+.logo_first_part {
+    color: #098666;
+    font-size: 24px;
+}
+
+.navbar-toggler-icon {
+    outline: none;
+    box-shadow: none;
+}
+
+h3 {
+    color: #272829;
+    font-size: 24px;
+}
+
+.nav-link {
+    color: #272829;
+    font-size: 18px;
+}
+
+.nav-item :hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.fa-solid {
+    font-size: 16px;
+    color: #272829;
+    padding-right: 20px;
+}
+
+.fa-regular {
+    font-size: 16px;
+    color: #272829;
+    padding: 20px;
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.fa-regular:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+a {
+    color: #272829;
+    text-decoration: none;
+}
+
+.btn_search:hover {
+    background-color: #098666;
+}
+
+.btn_search {
+    color: #272829;
+    height: 2rem;
+    margin-bottom: 20px;
+    border-color: #098666;
+}
+
+.form-control-sm {
+    height: 2rem;
+}
+
+.navbar {
+    background-color: white;
+}
+
+h2 {
+    color: #272829;
+}
+
+.btn_banner {
+    border-color: #098666;
+    color: #272829;
+}
+
+.btn_banner:hover {
+    transition: 0.5s;
+    background-color: #098666;
+    color: white;
+}
+
+.slogan {
+    color: #098666;
+}
+
+.slogan_container {
+    background: #C3E2C2;
+}
+
+.card_container {
+    background: #EAECCC;
+}
+
+.card {
+    width: 18rem;
+    border: none;
+    border-radius: 0;
+}
+
+.card-img-top {
+    border-radius: 0;
+}
+
+.card-body {
+    color: #272829;
+    font-size: 16px;
+    font-weight: light;
+}
+
+.all_auctions_link {
+    text-decoration: underline;
+    margin-left: 47%;
+    margin-top: 10px;
+
+}
+
+
+/*FOOTER*/
+
+.footer_container {
+    background: #747264;
+}
+
+.footer_text {
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+
+/* -------------------MEDIA QUERY-----------------------*/
+@media only screen and (max-width:853px) {
+    .hum_menu {
+        font-size: 13px;
+    }
+
+    .fa-solid {
+        font-size: 13px;
+    }
+
+    .fa-regular {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 18px;
+        margin-left: 20px !important;
+    }
+
+    .logo_first_part {
+        font-size: 18px;
+    }
+
+    .search_form {
+        margin-top: 0 !important;
+    }
+
+    .banner {
+        margin-top: 40%;
+    }
+
+    .slogan_container {
+        width: 100%;
+        height: 200px;
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .btn_banner {
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+    .card_container.mt-5 {
+        margin-top: 10% !important;
+        padding-top: 20px !important;
+    }
+}

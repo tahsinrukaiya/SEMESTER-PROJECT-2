@@ -1,0 +1,66 @@
+.footer_container {
+    margin-top: 6% !important;
+}
+
+.text {
+    font-size: 32px;
+}
+
+.register_form_container {
+    background-color: #C3E2C2;
+    padding-top: 5%;
+    padding-top: 10%;
+    padding-bottom: 3%;
+}
+
+.register_form {
+    background: white;
+    width: 60%;
+    margin-left: 20%;
+    color: #272829;
+}
+
+.register_btn {
+    color: white;
+    background-color: #098666;
+}
+
+.register_btn:hover {
+    transform: scale(1.05);
+    transition: 1s;
+    color: white;
+    background-color: #098666;
+}
+
+.sign_up_link {
+    text-decoration: underline;
+}
+
+/* -------------------MEDIA QUERY-----------------------*/
+@media only screen and (max-width:853px) {
+    .register_form {
+        margin-top: 20% !important;
+        width: 90%;
+        margin-left: 4%;
+    }
+
+    .text {
+        font-size: 21px;
+    }
+
+    .register_form_container {
+        padding-top: 10% !important;
+    }
+
+    .user_name_input,
+    .email_input,
+    .password_input {
+        width: 100% !important;
+    }
+
+    .small_text {
+        font-size: 13px;
+        color: #272829;
+    }
+
+}

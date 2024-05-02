@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page of PedalPulse Auctions || PedalPulse Auctions</title>
+    <meta name="description" content="Landing page of PedalPulse Auctions">
+    <meta name="author" content="Rukaiya Tahsin">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="src/JS/auth/register.mjs"></script>
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="public/style/customcss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+        integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid navbar mx-5">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <h3><span>PedalPulse</span>Auctions</h3>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mx-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="public/pages/listing/index.html">Auctions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="navbar-brand mx-3 px-2" href="#">
+                <h3 class="logo"><span class="logo_first_part">PedalPulse</span>Auctions</h3>
+            </a>
+            <a class="login" href="public/pages/logIn/index.html"><i class="fa-regular fa-user"></i></a>
+            <a class="logout" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <button class="navbar-toggler hum_menu" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex mt-3 mx-3 search_form" role="search">
+                <input class="form-control form-control-sm me-2 rounded-5 search_input" type="search"
+                    placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary rounded-5 btn-sm mx-2 btn_search" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <!------------------HERO SECTION----------------------------------->
+    <div class="row mt-5 mx-0">
+        <div class="col-12 col-sm-6 col-md-8">
+            <img src="public/assets/hero_image.jpg" class="img-fluid banner" alt="wheel of a bycycle">
+        </div>
+        <div class="col-6 col-md-4 slogan_container ">
+            <h2 class="position-relative top-50 start-50 translate-middle text-center"><span class="slogan">From
+                    Bid to
+                    Bike: </span>Your Journey Starts Here!
+            </h2>
+            <button type="button"
+                class="btn btn-md rounded-5 position-relative top-50 start-50 translate-middle text-center btn_banner">See
+                All Auctions</button>
+        </div>
+    </div>
+
+
+    <!-----------DISPLAY PRODUCT CARDS------------------>
+    <div class="card-group card_container mt-5">
+        <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
+            <img src="public/assets/bycycle.png" class="card-img-top mt-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Xeed</h5>
+                <p class="card-text">Next Bid: 3000kr</p>
+                <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
+            </div>
+        </div>
+        <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
+            <img src="public/assets/bycycle.png" class="card-img-top mt-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Xeed</h5>
+                <p class="card-text">Next Bid: 3000kr</p>
+                <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
+            </div>
+        </div>
+        <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
+            <img src="public/assets/bycycle.png" class="card-img-top mt-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Xeed</h5>
+                <p class="card-text">Next Bid: 3000kr</p>
+                <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
+            </div>
+        </div>
+    </div>
+    <a href="#"><small class="text-muted all_auctions_link">See All
+            Auctions</small></a>
+
+
+    <!------------------------FOOTER------------------>
+
+    <div class=" container-fluid mt-5 pt-3 pb-3 footer_container">
+        <div class="container-fluid px-5">
+            <h4 class="footer_text">PedalPals Auctions</h4>
+            <h4 class="footer_text"> Contact Us</h4>
+            <h4 class="footer_text">About Us</h4>
+            <h6 class="footer_text">©all rights reserved</h6>
+        </div>
+    </div>
+
+</body>
+
+</html>
