@@ -1,3 +1,46 @@
 .card_container {
     margin-top: 10% !important;
 }
+
+
+
+
+
+/* -------------------MEDIA QUERY-----------------------*/
+@media only screen and (min-width: 375px) and (max-width:853px) {
+    .hum_menu {
+        font-size: 13px;
+    }
+
+    .fa-solid {
+        font-size: 13px;
+    }
+
+    .fa-regular {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 18px;
+        margin-left: 20px !important;
+    }
+
+    .logo_first_part {
+        font-size: 18px;
+    }
+
+    .search_form {
+        margin-top: 0 !important;
+    }
+
+    .card_container {
+        margin-top: 50% !important;
+    }
+
+    .product_card {
+        margin-left: 10% !important;
+    }
+
+
+
+}

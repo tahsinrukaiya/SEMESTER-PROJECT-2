@@ -46,7 +46,7 @@
                             <a class="nav-link" href="#">Buy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sell</a>
+                            <a class="nav-link" href="/public/pages/listing/create_listing.html">Sell</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
@@ -57,8 +57,8 @@
             <a class="navbar-brand mx-3 px-2" href="/index.html">
                 <h3 class="logo"><span class="logo_first_part">PedalPulse</span>Auctions</h3>
             </a>
-            <a class="login" href="#"><i class="fa-regular fa-user"></i></a>
-            <a class="logout" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <a class="login" href="/public/pages/logIn/index.html"><i class="fa-regular fa-user"></i></a>
+            <a class="logout" href="/index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
             <button class="navbar-toggler hum_menu" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -74,8 +74,8 @@
 
     <!-----------DISPLAY PRODUCT CARDS------------------>
     <div class="container-fluid card_container">
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row card_row">
+            <div class="col-md-4 card_column">
                 <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
                     <img src="/public/assets/bycycle.png" class="card-img-top mt-3" alt="...">
                     <div class="card-body">
@@ -108,14 +108,16 @@
             <!-- Repeat this pattern for the other cards -->
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
+                    <a href="/public/pages/listing/single_product.html">
+                        <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
+                            <img src="/public/assets/bycycle.png" class="card-img-top mt-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Xeed</h5>
+                                <p class="card-text">Next Bid: 3000kr</p>
+                                <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
                     <div class="card shadow-sm px-3 mt-5 mb-5 mx-5 product_card">
