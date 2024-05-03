@@ -88,8 +88,12 @@ h2 {
     color: white;
 }
 
-.slogan {
+.slogan_first_part {
     color: #098666;
+}
+
+.slogan {
+    color: #272829;
 }
 
 .slogan_container {
