@@ -104,6 +104,10 @@ h2 {
     background: #EAECCC;
 }
 
+.card_row {
+    margin-left: 5%;
+}
+
 .card {
     width: 18rem;
     border: none;
@@ -123,9 +127,21 @@ h2 {
 .all_auctions_link {
     text-decoration: underline;
     margin-left: 47%;
-    margin-top: 10px;
-
 }
+
+/*CAROUSEL
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    outline: black;
+    border: 1px solid #272829;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+*/
+
+
+
+
+
 
 
 /*FOOTER*/

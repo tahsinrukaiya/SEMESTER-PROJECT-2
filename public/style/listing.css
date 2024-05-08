@@ -6,6 +6,10 @@
     color: #272829;
 }
 
+.card_row {
+    margin-left: 5%;
+}
+
 .sub_navigation {
     background-color: #C3E2C2;
     width: 100%;
@@ -13,6 +17,12 @@
     margin-top: 10%;
     font-size: 18px;
     padding: 5px;
+}
+
+.heading_two {
+    margin-left: 40%;
+    padding-top: 3px;
+    color: grey;
 }
 
 /* -------------------MEDIA QUERY-----------------------*/
