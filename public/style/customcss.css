@@ -189,9 +189,11 @@ h2 {
     }
 
     .slogan_container {
-        width: 100%;
+        width: 93%;
         height: 150px;
         padding: 10px !important;
+        margin-left: 11px;
+        margin-right: 8px;
     }
 
     .slogan_first_part {
