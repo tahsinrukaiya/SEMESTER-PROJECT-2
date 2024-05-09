@@ -1,0 +1,21 @@
+.footer_container {
+    margin-top: 50% !important;
+}
+
+.main_container {
+    margin-top: 10%;
+    background-color: #EAECCC;
+}
+
+.profile_edit {
+    color: #272829;
+    border-color: #098666;
+}
+
+.profile_card {
+    margin-left: 20%;
+}
+
+.listing_text {
+    margin-top: 20% !important;
+}

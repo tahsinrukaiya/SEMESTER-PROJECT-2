@@ -1,5 +1,5 @@
 .footer_container {
-    margin-top: 50% !important;
+    margin-top: 10% !important;
 }
 
 .sub_navigation {
@@ -13,6 +13,7 @@
 
 .main_container {
     background-color: #EAECCC;
+    padding-bottom: 5%;
 }
 
 .product_detail {
@@ -28,4 +29,51 @@
 .bid_price {
     color: #272829;
     border: #272829;
+}
+
+h6 {
+    color: #272829;
+    font-size: 15px;
+}
+
+.btn_submit_bid {
+    border-color: #098666;
+    color: #272829;
+}
+
+.btn_submit_bid:hover {
+    color: white;
+    background-color: #098666;
+}
+
+.bid_form {
+    margin-left: 25%;
+    padding-bottom: 5%;
+}
+
+.form-control {
+    border-color: #272829;
+}
+
+
+/* -------------------MEDIA QUERY-----------------------*/
+@media only screen and (min-width: 375px) and (max-width:853px) {
+    .main_container {
+        margin-top: 30%;
+        padding-bottom: 10%;
+    }
+
+    .bid_form {
+        margin-left: 10% !important;
+        margin-top: 5% !important;
+        padding-bottom: 10%;
+    }
+
+    .bid_input {
+        line-height: 20px;
+    }
+
+    .btn_submit_bid {
+        line-height: 20px;
+    }
 }
