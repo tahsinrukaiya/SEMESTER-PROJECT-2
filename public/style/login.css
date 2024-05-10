@@ -41,14 +41,11 @@
     .login_form {
         width: 90%;
         margin-left: 5%;
+        margin-top: 10%;
     }
 
     .text {
         font-size: 24px;
-    }
-
-    .login_form_container {
-        padding-top: 10% !important;
     }
 
     .email_input,

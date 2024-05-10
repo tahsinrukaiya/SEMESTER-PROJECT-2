@@ -1,0 +1,46 @@
+.footer_container {
+    margin-top: 10% !important;
+}
+
+.heading_1 {
+    color: #272829;
+
+}
+
+.form-group {
+    color: #272829;
+}
+
+.main_container {
+    margin-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #EAECCC;
+}
+
+.form_container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: white;
+}
+
+#create_listing_btn {
+    color: #272829;
+    border-color: #098666;
+}
+
+#create_listing_btn:hover {
+    color: white;
+    background-color: #098666;
+}
+
+/* -------------------MEDIA QUERY-----------------------*/
+@media only screen and (min-width: 375px) and (max-width:853px) {
+    .main_container {
+        margin-top: 40%;
+    }
+
+    .inner_form_container {
+        width: 80% !important;
+    }
+}
