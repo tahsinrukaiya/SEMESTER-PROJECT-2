@@ -1,9 +1,9 @@
 import { API_BASE } from "../constants.mjs";
 import { API_LOGIN } from "../constants.mjs";
 import { API_AUTH } from "../constants.mjs";
-import { saveStorage } from "./storage/local_storage.mjs";
+import { saveStorage } from "../storage/local_storage.mjs";
 
-const logInForm = document.getElementById('logIn_form');
+const logInForm = document.getElementById("logIn_form");
 const email = document.getElementById("email_address");
 const password = document.getElementById("password");
 
@@ -27,7 +27,6 @@ if (logInForm) {
                 };
                 const response = await fetch(url, postData);
 
-
                 if (!response.ok) {
                     throw new Error("Network Issue");
                 }
@@ -45,7 +44,6 @@ if (logInForm) {
                     console.log("Log in Successfull!", response);
                     window.location.href = "../index.html";
                 }
-
             }
             catch (error) {
                 console.log(error);
