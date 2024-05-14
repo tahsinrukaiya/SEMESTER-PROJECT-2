@@ -17,5 +17,28 @@
 }
 
 .listing_text {
-    margin-top: 20% !important;
+    margin-top: 10%;
+    color: #272829;
+}
+
+h6 {
+    color: #272829;
+}
+
+/* -------------------MEDIA QUERY-----------------------*/
+@media only screen and (min-width: 375px) and (max-width:853px) {
+    .main_container {
+        margin-top: 20%;
+    }
+
+    .profile_card {
+        margin-left: 10% !important;
+    }
+
+    .listing_text {
+        margin-left: 10%;
+    }
+
+
+
 }

@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/src/JS/auth/register.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
     <link rel="stylesheet" href="/public/style/register.css">
@@ -72,8 +73,8 @@
     <!---------------------REGISTER FORM------------------------->
     <div class="container-fluid register_form_container">
         <div class="col vh-100 p-3 register_form">
-            <form class="position-relative top-50 start-50 translate-middle" id="logIn_form"
-                action="../listing/index.html">
+            <form class="position-relative top-50 start-50 translate-middle" id="register_form"
+                action="/public/pages/logIn/index.html">
                 <div class="mb-3 form-outline w-75 mx-auto ">
                     <h1 class="text text-center">Register a user at PedalPulse.com</h1>
                     <label for="exampleInputEmail1" class="form-label mt-3">
@@ -83,7 +84,6 @@
                         pattern="^[\w]+$" title="The name must not contain punctuation symbols except underscore (_)"
                         placeholder=" Full
                         name">
-
 
                     <label for="exampleInputEmail1" class="form-label">
                         <h6>Email address</h6>
