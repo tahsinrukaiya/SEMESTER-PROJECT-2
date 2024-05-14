@@ -31,7 +31,7 @@ if (registerForm) {
                 console.log(response);
                 console.log("Registration Successfull!", response);
                 alert("Registration Successfull!");
-                window.location.href = "./logIn/index.html";
+                window.location.href = "../logIn/index.html";
 
                 if (!response.ok) {
                     throw new Error("Network Issue");
