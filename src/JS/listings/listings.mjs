@@ -26,13 +26,13 @@ async function fetch_all_listings(url) {
             let mediaHTML = '';
             if (media && media.length > 0) {
                 for (let j = 0; j < media.length; j++) {
-                    mediaHTML += `<img src="${media[j]}" class="card-img-top mt-3 px-3 pb-3" alt="...">`;
+                    mediaHTML = `<img src="${media[j].url}" class="card-img-top mt-3 px-3 pb-3" alt="...">`;
                 }
             }
             card_row.innerHTML += `
                     <div class="col-lg pt-4 pb-4 card_column">
                         <div class="card cards">
-                            ${mediaHTML}
+                           ${mediaHTML}
                             <div class="card-body">
                                 <h6 class="card-id">Id:${listings.data[i].id} </h6>
                                 <h6 class="card-title">Title: ${listings.data[i].title}</h6>
