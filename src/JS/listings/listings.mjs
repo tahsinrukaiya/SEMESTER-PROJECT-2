@@ -38,7 +38,7 @@ async function fetch_all_listings(url) {
                             <div class="card-body">
                                 <h6 class="card-id">Id: ${listings.data[i].id} </h6>
                                 <h6 class="card-title">Title: ${listings.data[i].title}</h6>
-                                <p class="card-text">Description: ${listings.data[i].description} </p>
+                                <p class="card-text">Bid: ${listings.data[i]._count.bids} </p>
                                 <p class="card-tag">Tags: ${listings.data[i].tags}</p>
                                 <p class="card-text"><small class="text-muted">Seller: ${listings.data[i].seller}</small></p>
                                 <p class="card-ends_at">Ends at: ${formattedDate} </p>
