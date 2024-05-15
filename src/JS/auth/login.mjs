@@ -32,9 +32,7 @@ if (logInForm) {
                 }
                 else {
                     const json = await response.json();
-                    // After successful login
                     saveStorage("token", json.accessToken);
-
                     saveStorage("user_profile", {
                         userName: json.name,
                         userEmail: json.email,
@@ -42,14 +40,14 @@ if (logInForm) {
                     });
                     console.log(response);
                     console.log("Log in Successfull!", response);
-                    window.location.href = "../index.html";
+                    //window.location.href = "../../../index.html";
                 }
             }
             catch (error) {
                 console.log(error);
             }
         }
-        loginUser((API_BASE + API_AUTH + API_LOGIN), userLogin);
+        loginUser(API_BASE + API_AUTH + API_LOGIN, userLogin);
     })
 }
 

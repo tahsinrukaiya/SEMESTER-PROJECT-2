@@ -72,13 +72,13 @@
     <!-------LOG IN FORM--------------------------->
     <div class="container-fluid login_form_container">
         <div class="col vh-100 p-3 login_form">
-            <form class="position-relative top-50 start-50 translate-middle" id="logIn_form" action="/index.html">
+            <form class="position-relative top-50 start-50 translate-middle" id="logIn_form">
                 <div class="mb-3 form-outline w-75 mx-auto ">
                     <h1 class="text text-center">Log in here</h1>
                     <label for="exampleInputEmail1" class="form-label">
                         <h6>Email address</h6>
                     </label>
-                    <input type="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                    <input type="email" pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
                         title="The email must be a valid stud.noroff.no email address"
                         class="form-control rounded-5 email_input" id="email_address" aria-describedby="emailHelp"
                         required>
