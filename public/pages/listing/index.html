@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/src/JS/listings/listings.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
     <link rel="stylesheet" href="/public/style/listing.css">
@@ -72,87 +73,25 @@
         <h6 class="heading_two">PedalPulse Auctions > All Auctions</h6>
     </div>
 
-
-
-
     <!-----------DISPLAY PRODUCT CARDS---------------->
     <section id="products" class="pt-2">
         <h2 class="text-center my-5 mt-4">All Auctions</h2>
-        <div class="container-fluid card_container">
-            <div class="row pt-5 card_row">
-                <div class="col-lg pt-4 pb-4">
+        <div class="container-fluid card_container" id="card_container">
+            <div class="row pt-5 card_row" id="card_row">
+                <div class="col-lg pt-4 pb-4 card_column" id="card_column">
                     <a href="single_product.html">
-                        <div class="card">
-                            <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
+                        <div class="card cards" id="cards">
+                            <!---<img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Xeed</h5>
                                 <p class="card-text">Next Bid: 3000kr</p>
                                 <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-                            </div>
+                            </div>-->
                         </div>
                     </a>
-                </div>
-                <div class="col-lg pt-4 pb-4">
-                    <a href="single_product.html">
-                        <div class="card">
-                            <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Xeed</h5>
-                                <p class="card-text">Next Bid: 3000kr</p>
-                                <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg pt-4 pb-4">
-                    <a href="single_product.html">
-                        <div class="card">
-                            <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Xeed</h5>
-                                <p class="card-text">Next Bid: 3000kr</p>
-                                <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row card_row">
-                <div class="col-lg pt-4 pb-4">
-                    <div class="card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg pt-4 pb-4">
-                    <div class="card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg pt-4 pb-4">
-                    <div class="card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-
     </section>
 
 

@@ -32,15 +32,16 @@ if (logInForm) {
                 }
                 else {
                     const json = await response.json();
-                    saveStorage("token", json.accessToken);
+                    console.log(json);
+                    saveStorage("token", json.data.accessToken);
                     saveStorage("user_profile", {
-                        userName: json.name,
-                        userEmail: json.email,
-                        userAvatar: json.avatar,
+                        userName: json.data.name,
+                        userEmail: json.data.email,
+                        userAvatar: json.data.avatar,
                     });
                     console.log(response);
                     console.log("Log in Successfull!", response);
-                    //window.location.href = "../../../index.html";
+                    window.location.href = "../../../index.html";
                 }
             }
             catch (error) {
