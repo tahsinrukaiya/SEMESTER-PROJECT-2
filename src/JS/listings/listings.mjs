@@ -29,19 +29,21 @@ async function fetch_all_listings(url) {
                     mediaHTML = `<img src="${media[j].url}" class="card-img-top mt-3 px-3 pb-3" alt="...">`;
                 }
             }
+            const formattedDate = formatDate(listings.data[i].endsAt);
             card_row.innerHTML += `
-                    <div class="col-lg pt-4 pb-4 card_column">
+                    <div class="col-lg pt-3 pb-4 card_column">
+                    <a href="single_product.html">
                         <div class="card cards">
                            ${mediaHTML}
                             <div class="card-body">
-                                <h6 class="card-id">Id:${listings.data[i].id} </h6>
+                                <h6 class="card-id">Id: ${listings.data[i].id} </h6>
                                 <h6 class="card-title">Title: ${listings.data[i].title}</h6>
-                                <p class="card-text">Description :${listings.data[i].description} </p>
+                                <p class="card-text">Description: ${listings.data[i].description} </p>
                                 <p class="card-tag">Tags: ${listings.data[i].tags}</p>
                                 <p class="card-text"><small class="text-muted">Seller: ${listings.data[i].seller}</small></p>
-                                <p class="card-ends_at">Ends at:${listings.data[i].endsAt} </p>
+                                <p class="card-ends_at">Ends at: ${formattedDate} </p>
                             </div>
-                      
+                      </a>
                     </div>
                 </div>`;
         }

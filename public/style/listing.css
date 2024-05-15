@@ -25,6 +25,33 @@
     color: grey;
 }
 
+.card-id {
+    font-size: 13px;
+}
+
+.card-ends_at {
+    font-size: 13px;
+}
+
+.cards {
+    width: 300px;
+
+}
+
+.cards img {
+    width: 300px;
+    height: 200px;
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+.card-title {
+    font-size: 15px;
+    color: #098666;
+    font-weight: bolder;
+}
 
 /* -------------------MEDIA QUERY-----------------------*/
 @media only screen and (min-width: 375px) and (max-width:853px) {
