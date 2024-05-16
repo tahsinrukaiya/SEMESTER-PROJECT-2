@@ -25,7 +25,6 @@ export async function fetch_single_listing() {
         _bids: true,
     };
 
-
     // Converting query parameters to a string
     const queryString = Object.keys(queryParams)
         .map(key => `${key}=${queryParams[key]}`)
@@ -47,12 +46,14 @@ export async function fetch_single_listing() {
     }
 
     const listingDetail = await response.json();
+    console.log(listingDetail);
     const main_container = document.getElementById('main_container');
     const card_container = document.getElementById('card_container');
     const product_detail = document.getElementById('product_detail');
     const formattedDate = formatDate(listingDetail.data.endsAt);
-    const count = listingDetail._count;
-    const seller = listingDetail.seller;
+    const count = listingDetail.data._count;
+    const seller = listingDetail.data.seller;
+
 
     card_container.innerHTML = `<div class="card mb-5 product_detail" id="product_detail">
     <img class="card-img-top pt-5 px-5 pb-5" src="${listingDetail.data.media[0].url} " alt="Card image cap">
@@ -65,7 +66,7 @@ export async function fetch_single_listing() {
             <h6 class="text text-start border-bottom mx-5 pb-2">Current Bid: </h6>
         </div>
         <div class="col">
-            <h6 class="text text-end border-bottom  mx-5 pb-2 bid"> ${count}</h6>
+            <h6 class="text text-end border-bottom  mx-5 pb-2 bid"> ${count.bids}</h6>
         </div>
     </div>
     <div class="row mt-3">
@@ -82,7 +83,7 @@ export async function fetch_single_listing() {
             <h6 class="text text-start border-bottom mx-5 pb-2">Seller</h6>
         </div>
         <div class="col">
-            <h6 class="text text-end border-bottom  mx-5 pb-2">${seller}</h6>
+            <h6 class="text text-end border-bottom  mx-5 pb-2">${seller.name}</h6>
         </div>
     </div>
     <form class="bid_form mt-5">
