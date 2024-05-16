@@ -16,6 +16,16 @@
     padding-bottom: 5%;
 }
 
+.card-id {
+    color: gray;
+    font-size: 12px;
+}
+
+.card-title {
+    color: #098666;
+    font-size: 24px;
+}
+
 .product_detail {
     width: 100%;
 }

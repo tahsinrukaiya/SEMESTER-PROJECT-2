@@ -32,7 +32,7 @@ async function fetch_all_listings(url) {
             const formattedDate = formatDate(listings.data[i].endsAt);
             card_row.innerHTML += `
                     <div class="col-lg pt-3 pb-4 card_column">
-                    <a href="single_product.html">
+                    <a href="single_listing.html?id=${listings.data[i].id}">
                         <div class="card cards">
                            ${mediaHTML}
                             <div class="card-body">

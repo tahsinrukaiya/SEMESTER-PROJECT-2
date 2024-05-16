@@ -10,9 +10,10 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/src/JS/listings/single_listing.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
-    <link rel="stylesheet" href="/public/style/single_product.css">
+    <link rel="stylesheet" href="/public/style/single_listing.css">
     <link rel="preconnect" href="/https://fonts.googleapis.com">
     <link rel="preconnect" href="/https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -69,13 +70,13 @@
     </nav>
 
 
-    <!-----------DISPLAY SINGLE PRODUCT DETAIL------------------>
+    <!-----------DISPLAY SINGLE LISTING ------------------>
     <div class="container-fluid sub_navigation">
         <h6 class="text text-center pt-1">PedalPulse Auctions > All Auctions > Single Product</h6>
     </div>
-    <div class="contianer main_container">
-        <div class="container shadow-sm">
-            <div class="card mb-5 product_detail">
+    <div class="contianer main_container" id="main_container">
+        <div class="container shadow-sm card_container" id="card_container">
+            <!---- <div class="card mb-5 product_detail" id="product_detail">
                 <img class="card-img-top pt-5 px-5 pb-5" src="/public/assets/c1.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-center mt-2">Dario Peogoretti - Big leg Emma</h5>
@@ -125,7 +126,7 @@
                 </form>
 
             </div>
-
+        -->
         </div>
 
     </div>
