@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="module" src="src/JS/auth/register.mjs"></script>
+    <script type="module" src="src/JS/index.mjs"></script>
     <link rel="stylesheet" href="dist/css/index.css">
     <link rel="stylesheet" href="public/style/customcss.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,47 +90,24 @@
 
 
     <!-----------DISPLAY PRODUCT CARDS------------------>
-    <div class="container-fluid mt-5 card_container">
-        <div class="row pt-4 pb-4 card_row">
-            <div class="col-lg pt-4 pb-4">
-                <a href="single_product.html">
-                    <div class="card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-                        </div>
+    <div class="container-fluid mt-5 card_container" id="card_container">
+        <div class="row pt-5 card_row" id="card_row">
+            <!---<div class="col-lg pt-3 pb-4 card_column">
+                    <a href="single_listing.html?id=${listings.data[i].id}">
+                        <div class="card cards">
+                           ${mediaHTML}
+                            <div class="card-body">
+                                <h6 class="card-id">Id: ${listings.data[i].id} </h6>
+                                <h6 class="card-title">Title: ${listings.data[i].title}</h6>
+                                <p class="card-text">Bid: ${listings.data[i]._count.bids} </p>
+                                <p class="card-tag">Tags: ${listings.data[i].tags}</p>
+                                <p class="card-text"><small class="text-muted">Seller: ${listings.data[i].seller}</small></p>
+                                <p class="card-ends_at">Ends at: ${formattedDate} </p>
+                            </div>
+                      </a>
                     </div>
-                </a>
-            </div>
-            <div class="col-lg pt-4 pb-4">
-                <a href="single_product.html">
-                    <div class="card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg pt-4 pb-4">
-                <a href="single_product.html">
-                    <div class="card">
-                        <img src="/public/assets/bycycle.png" class="card-img-top mt-3 px-3 pb-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Xeed</h5>
-                            <p class="card-text">Next Bid: 3000kr</p>
-                            <p class="card-text"><small class="text-muted">Seller: Jon Grosland</small></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </div>-->
         </div>
-    </div>
     </div>
     <a href="public/pages/listing/index.html"><small class="text all_auctions_link">See All
             Auctions</small></a>

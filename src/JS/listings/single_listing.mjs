@@ -51,8 +51,11 @@ export async function fetch_single_listing() {
     const card_container = document.getElementById('card_container');
     const product_detail = document.getElementById('product_detail');
     const formattedDate = formatDate(listingDetail.data.endsAt);
+    const formattedDate2 = formatDate(listingDetail.data.created);
     const count = listingDetail.data._count;
     const seller = listingDetail.data.seller;
+    const bidder = listingDetail.data.bids[0].bidder.name;
+    const bid_history_container = document.getElementById('bid_history_container');
 
 
     card_container.innerHTML = `<div class="card mb-5 product_detail" id="product_detail">
@@ -77,6 +80,14 @@ export async function fetch_single_listing() {
             <h6 class="text text-end border-bottom  mx-5 pb-2">${formattedDate}</h6>
         </div>
     </div>
+    <div class="row mt-3">
+    <div class="col">
+        <h6 class="text text-start border-bottom mx-5 pb-2">Created</h6>
+    </div>
+    <div class="col">
+        <h6 class="text text-end border-bottom  mx-5 pb-2">${formattedDate2}</h6>
+    </div>
+</div>
     
     <div class="row mt-3">
         <div class="col">
@@ -96,9 +107,18 @@ export async function fetch_single_listing() {
             </div>
         </div>
     </form>
+</div>
+<h3 class=text-center>Bid History</h3>
+<div class="container mt-5 bid_history_container">
+<div class="row row-cols-2 bid_history_row">
+    <div class="col">${bidder}</div>
+    <div class="col"> ${count.bids}</div>
+</div>
+</div>
 </div>`;
 }
 
 fetch_single_listing();
+
 
 
