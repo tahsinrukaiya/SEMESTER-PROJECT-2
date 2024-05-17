@@ -64,37 +64,37 @@ export async function fetch_single_listing() {
     <h5 class="card-id text-center mt-2">ID: ${listingDetail.data.id} </h5>
     <h5 class="card-title text-center mt-2">Title: ${listingDetail.data.title}</h5>
     </div>
-    <div class="row mt-5"> 
+    <div class="row mt-5 border-bottom mx-5"> 
         <div class="col">
-            <h6 class="text text-start border-bottom mx-5 pb-2">Current Bid: </h6>
+            <h6 class="text text-start mx-5 pb-1">Current Bid: </h6>
         </div>
         <div class="col">
-            <h6 class="text text-end border-bottom  mx-5 pb-2 bid"> ${count.bids}</h6>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col">
-            <h6 class="text text-start border-bottom mx-5 pb-2">Ends At</h6>
-        </div>
-        <div class="col">
-            <h6 class="text text-end border-bottom  mx-5 pb-2">${formattedDate}</h6>
+            <h6 class="text text-end mx-5 pb-1 bid"> ${count.bids}</h6>
         </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 border-bottom mx-5">
+        <div class="col">
+            <h6 class="text text-start mx-5 pb-1">Ends At</h6>
+        </div>
+        <div class="col">
+            <h6 class="text text-end mx-5 pb-1">${formattedDate}</h6>
+        </div>
+    </div>
+    <div class="row mt-3 border-bottom mx-5 ">
     <div class="col">
-        <h6 class="text text-start border-bottom mx-5 pb-2">Created</h6>
+        <h6 class="text text-start mx-5 pb-1">Created</h6>
     </div>
     <div class="col">
-        <h6 class="text text-end border-bottom  mx-5 pb-2">${formattedDate2}</h6>
+        <h6 class="text text-end mx-5 pb-1">${formattedDate2}</h6>
     </div>
 </div>
     
-    <div class="row mt-3">
+    <div class="row mt-3 border-bottom mx-5">
         <div class="col">
-            <h6 class="text text-start border-bottom mx-5 pb-2">Seller</h6>
+            <h6 class="text text-start mx-5 pb-1">Seller</h6>
         </div>
         <div class="col">
-            <h6 class="text text-end border-bottom  mx-5 pb-2">${seller.name}</h6>
+            <h6 class="text text-end mx-5 pb-1">${seller.name}</h6>
         </div>
     </div>
     <form class="bid_form mt-5">
