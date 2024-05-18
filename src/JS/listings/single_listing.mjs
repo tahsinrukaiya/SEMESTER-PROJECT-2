@@ -49,6 +49,7 @@ export async function fetch_single_listing() {
     const main_container = document.getElementById('main_container');
     const card_container = document.getElementById('card_container');
     const product_detail = document.getElementById('product_detail');
+    const bid_history_container = document.getElementById('bid_history_container');
     const formattedDate = formatDate(listingDetail.data.endsAt);
     const formattedDate2 = formatDate(listingDetail.data.created);
     const count = listingDetail.data._count;
@@ -57,7 +58,7 @@ export async function fetch_single_listing() {
     console.log(bids);
     const bidder_name = listingDetail.data.bids[0].bidder.name;
     const bid_amount = listingDetail.data.bids[0].amount;
-    const bid_history_container = document.getElementById('bid_history_container');
+
 
     card_container.innerHTML = `<div class="card mb-5 product_detail" id="product_detail">
     <img class="card-img-top pt-5 px-5 pb-5" src="${listingDetail.data.media[0].url} " alt="Card image cap">
@@ -108,16 +109,9 @@ export async function fetch_single_listing() {
             </div>
         </div>
     </form>
-</div>
-<h3 class=text-center>Bid History</h3>
-<!--
-<div class="container mt-5 bid_history_container id="bid_history_container">
-<div class="row row-cols-2 bid_history_row">
-    <div class="col"><h6>${bidder_name}</h6></div>
-    <div class="col"><h6> ${count.bids}</h6></div>
-</div>-->
 </div>`;
 
+    console.log(bid_history_container);
 
     // Bid history
     if (bid_history_container) {
@@ -127,14 +121,12 @@ export async function fetch_single_listing() {
         bids.forEach(bid => {
             const bidderName = bid.bidder.name;
             const bidAmount = bid.amount;
-            console.log(bidderName);
-            console.log(bidAmount);
 
             // Append each bid's HTML to the bidHistoryHTML string
             bidHistoryHTML += `
-            <div class="row row-cols-2 bid_history_row">
-                <div class="col"><h6>${bidderName}</h6></div>
-                <div class="col"><h6>${bidAmount}</h6></div>
+            <div class="row row-cols-2 pt-3 bid_history_row">
+                <div class="col pt-2 bid_history_col text-start"><h6>${bidderName}</h6></div>
+                <div class="col pt-2 bid_history_col text-end"><h6>${bidAmount}</h6></div>
             </div>`;
         });
 

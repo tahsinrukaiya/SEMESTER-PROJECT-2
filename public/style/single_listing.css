@@ -73,6 +73,19 @@ h6 {
     padding-bottom: 5%;
 }
 
+.bid_history_container {
+    background-color: white;
+}
+
+.bid_history_row {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+
+.bid_history_col {
+    background-color: #EAECCC;
+}
+
 .form-control {
     border-color: #272829;
 }
