@@ -68,7 +68,7 @@ export async function fetch_single_listing() {
     </div>
     <div class="row mt-5 border-bottom mx-5"> 
         <div class="col">
-            <h6 class="text text-start mx-5 pb-1">Current Bid: </h6>
+            <h6 class="text text-start mx-5 pb-1">Number of Bids: </h6>
         </div>
         <div class="col">
             <h6 class="text text-end mx-5 pb-1 bid"> ${count.bids}</h6>
@@ -125,8 +125,8 @@ export async function fetch_single_listing() {
             // Append each bid's HTML to the bidHistoryHTML string
             bidHistoryHTML += `
             <div class="row row-cols-2 pt-3 bid_history_row">
-                <div class="col pt-2 bid_history_col text-start"><h6>${bidderName}</h6></div>
-                <div class="col pt-2 bid_history_col text-end"><h6>${bidAmount}</h6></div>
+                <div class="col pt-2 bid_history_col rounded-start text-start"><h6>${bidderName}</h6></div>
+                <div class="col pt-2 bid_history_col rounded-end text-end"><h6>${bidAmount}</h6></div>
             </div>`;
         });
 

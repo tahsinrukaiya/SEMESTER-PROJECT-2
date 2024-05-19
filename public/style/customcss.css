@@ -137,6 +137,11 @@ h2 {
     height: 200px;
 }
 
+.card-title {
+    color: #098666;
+    font-size: 18px;
+}
+
 /*FOOTER*/
 
 .footer_container {

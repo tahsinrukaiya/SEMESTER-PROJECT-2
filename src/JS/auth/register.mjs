@@ -3,6 +3,7 @@ import { API_AUTH } from "../constants.mjs";
 import { API_REGISTER } from "../constants.mjs";
 
 
+
 const registerForm = document.getElementById('register_form');
 if (registerForm) {
     registerForm.addEventListener("submit", async (event) => {
@@ -47,4 +48,5 @@ if (registerForm) {
         registerUser((API_BASE + API_AUTH + API_REGISTER), createUser);
     })
 }
+
 

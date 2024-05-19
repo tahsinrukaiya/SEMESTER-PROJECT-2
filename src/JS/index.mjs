@@ -6,7 +6,6 @@ const card_container = document.getElementById('card_container');
 const card_row = document.getElementById('card_row');
 
 
-
 async function fetch_all_listings(url) {
     try {
         const getData = {
@@ -18,10 +17,10 @@ async function fetch_all_listings(url) {
 
         const response = await fetch(url, getData);
         const listings = await response.json();
-        console.log(listings);
+
 
         // Get the first 3 items using slice
-        const firstThreeListings = listings.data.slice(0, 3);
+        const firstThreeListings = listings.data.slice(0, 6);
 
         for (let i = 0; i < firstThreeListings.length; i++) {
             const media = firstThreeListings[i].media;
@@ -39,11 +38,9 @@ async function fetch_all_listings(url) {
                         <div class="card cards">
                            ${mediaHTML}
                             <div class="card-body">
-                                <h6 class="card-id">Id: ${listings.data[i].id} </h6>
                                 <h6 class="card-title">Title: ${listings.data[i].title}</h6>
-                                <p class="card-text">Bid: ${listings.data[i]._count.bids} </p>
+                                <p class="card-text">Number of Bids: ${listings.data[i]._count.bids} </p>
                                 <p class="card-tag">Tags: ${listings.data[i].tags}</p>
-                                <p class="card-text"><small class="text-muted">Seller: ${listings.data[i].seller}</small></p>
                                 <p class="card-ends_at">Ends at: ${formattedDate} </p>
                             </div>
                       </a>
