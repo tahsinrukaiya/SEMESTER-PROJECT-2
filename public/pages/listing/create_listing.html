@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/src/JS/listings/create_listing.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
     <link rel="stylesheet" href="/public/style/create_listing.css">
@@ -72,36 +73,44 @@
     <div class="container-fluid sub_navigation">
         <h6 class="text text-center pt-1">PedalPulse Auctions > All Auctions > Single Product</h6>
     </div>
-    <div class="contianer main_container">
+
+    <!------------------------CREATE LISTING FORM-------------------------------->
+    <div class="container main_container">
         <div class="container form_container shadow-sm">
             <h4 class="text text-center mt-3 pt-3 heading_1">Create Listing</h4>
             <div class="container inner_form_container sm mt-3 w-50">
-                <form class="mx-3" id="post_form" action="public/pages/feed/index.html" method="post">
+                <form class="mx-3" id="create_listing_form" action="public/pages/listing/index.html" method="post">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1" class="mt-3">Title</label>
-                        <input type="title" class="form-control" id="title" placeholder="Title of your listing"
+                        <label for="title" class="mt-3">Title</label>
+                        <input type="text" class="form-control" id="listing_title" placeholder="Title of your listing"
                             required>
                     </div>
                     <div class="form-group pb-3 pt-3">
-                        <label for="exampleFormControlTextarea1 ">Description</label>
-                        <textarea class="form-control" id="body" maxlength="500" rows="3" required></textarea>
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="listing_description" maxlength="500" rows="3"
+                            required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1" class="mt-3">Image URL</label>
-                        <input type="media" class="form-control" id="media" placeholder="Media of listing">
+                        <label for="tags" class="mt-3">Tags</label>
+                        <input type="text" class="form-control" id="listing_tags" placeholder="Tags of listing">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1" class="mt-3">End Date</label>
-                        <input type="tags" class="form-control" id="tags" placeholder="Date of your listing">
+                        <label for="image_url" class="mt-3">Image URL</label>
+                        <input type="text" class="form-control" id="listing_media" placeholder="Media of listing">
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="mt-3">End Date</label>
+                        <input type="datetime-local" class="form-control" id="listing_end_date"
+                            placeholder="Date of your listing">
                     </div>
 
-                    <!--Button trigger modal -->
+                    <!-- Button trigger modal -->
                     <button type="submit" class="btn mt-3 rounded-pill" id="create_listing_btn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
                         Create Listing
                     </button>
 
-                    <div class="modal fade text-primary" id="post_modal" tabindex="-1"
+                    <div class="modal fade text-primary" id="listing_modal" tabindex="-1"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -121,21 +130,8 @@
                     </div>
                 </form>
             </div>
-
         </div>
-        </form>
-
     </div>
-
-    </div>
-
-    </div>
-
-
-
-
-
-
 
 
 
