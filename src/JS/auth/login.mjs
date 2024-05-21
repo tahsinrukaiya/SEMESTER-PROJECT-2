@@ -42,6 +42,7 @@ if (logInForm) {
                     });
                     console.log(response);
                     console.log("Log in Successfull!", response);
+                    alert("Log in success!");
                     window.location.href = "../../../index.html";
                 }
             }
