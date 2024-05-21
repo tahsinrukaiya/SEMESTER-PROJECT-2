@@ -1,18 +1,16 @@
 import { API_BASE } from "../constants.mjs";
-import { API_AUTH } from "../constants.mjs";
 import { API_CREATE_LISTING } from "../constants.mjs";
 import { API_KEY } from "../constants.mjs";
 
 const main_container = document.getElementById('main_container');
 const form_container = document.getElementById('form_container');
 const create_listing_form = document.getElementById('create_listing_form');
-const listing_title = document.getElementById(' listing_title');
-const listing_description = document.getElementById(' listing_description');
-const listing_tags = document.getElementById(' listing_tags');
+const listing_title = document.getElementById('listing_title');
+const listing_description = document.getElementById('listing_description');
+const listing_tags = document.getElementById('listing_tags');
 const listing_media = document.getElementById('listing_media');
-const listing_end_date = document.getElementById(' listing_end_date');
+const listing_end_date = document.getElementById('listing_end_date');
 const create_listing_btn = document.getElementById('create_listing_btn');
-
 
 // Retrieve the access token from local storage
 const token = JSON.parse(localStorage.getItem('token'));
@@ -28,24 +26,26 @@ if (token) {
 
 create_listing_form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    console.log(listing_title, listing_description, listing_tags, listing_media, listing_end_date);
-
-    //user inputs from the form
+    // User inputs from the form
     const createListing = {
-        listing_title: listing_title.value,
-        listing_description: listing_description.value,
-        listing_tags: listing_tags.value,
-        listing_media: listing_media.value,
-        listing_end_date: listing_end_date.value,
+        title: listing_title.value,
+        description: listing_description.value,
+        tags: listing_tags.value.split(',').map(tag => tag.trim()), // Split tags by comma and trim whitespace
+        media: [{
+            url: listing_media.value,
+            alt: listing_title.value // You might want to change this to a more appropriate alt text
+        }],
+        endsAt: new Date(listing_end_date.value).toISOString() // Convert date to ISO string
     };
+
     console.log(createListing);
     //api call here with accesstoken
     try {
-        const response = await fetch(API_BASE + API_AUTH + API_CREATE_LISTING, {
+        const response = await fetch(API_BASE + API_CREATE_LISTING, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${storedAccessToken}`,
+                Authorization: `Bearer ${token}`,
                 "X-Noroff-API-Key": API_KEY
             },
             body: JSON.stringify(createListing),
@@ -69,7 +69,7 @@ create_listing_form.addEventListener("submit", async (event) => {
                 console.log('Modal closed');
                 // Delay the page reload to ensure the modal is closed
                 setTimeout(() => {
-                    window.location.href = "/public/pages/listing/index.html";
+                    window.location.href = "index.html";
                 }, 500);
             });
         }
