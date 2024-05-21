@@ -53,5 +53,5 @@ async function fetch_all_listings(url) {
     }
 }
 
-fetch_all_listings(API_BASE + API_ALL_LISTINGS);
+fetch_all_listings(`${API_BASE}${API_ALL_LISTINGS}?sort=created`);
 
