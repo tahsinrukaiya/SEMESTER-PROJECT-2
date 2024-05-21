@@ -14,7 +14,6 @@ function isUserLoggedIn() {
     return !!token;
 }
 
-
 // FUNCTION TO FETCH POST DETAIL USING ID AND TITLE
 export async function fetch_single_listing() {
 
@@ -53,7 +52,6 @@ export async function fetch_single_listing() {
     }
 
     const listingDetail = await response.json();
-    console.log(listingDetail);
     const main_container = document.getElementById('main_container');
     const card_container = document.getElementById('card_container');
     const product_detail = document.getElementById('product_detail');
@@ -63,7 +61,6 @@ export async function fetch_single_listing() {
     const count = listingDetail.data._count;
     const seller = listingDetail.data.seller;
     const bids = listingDetail.data.bids; // This is an array of bids
-    console.log(bids);
 
     //retrieve bidder name and bid amount
     let bidder_name = 'N/A';
@@ -79,8 +76,14 @@ export async function fetch_single_listing() {
         }
     }
 
+    // Generate HTML for media
+    const mediaHTML = listingDetail.data.media.map(mediaItem =>
+        `<img class="card-img-top pt-5 px-5 pb-5" src="${mediaItem.url}" alt="Card image cap">`
+    ).join('');
+
+
     card_container.innerHTML = `<div class="card mb-5 product_detail" id="product_detail">
-        <img class="card-img-top pt-5 px-5 pb-5" src="${listingDetail.data.media[0].url}" alt="Card image cap">
+    ${mediaHTML}
         <div class="card-body">
         <h5 class="card-id text-center mt-2">ID: ${listingDetail.data.id}</h5>
         <h5 class="card-title text-center mt-2">Title: ${listingDetail.data.title}</h5>
@@ -117,6 +120,11 @@ export async function fetch_single_listing() {
                 <h6 class="text text-end mx-5 pb-1">${seller.name}</h6>
             </div>
         </div>
+    </div>`;
+
+    // Only show the bid form if the user is logged in
+    if (isUserLoggedIn()) {
+        card_container.innerHTML += `
         <form class="bid_form mt-5">
             <div class="row">
                 <div class="col">
@@ -126,37 +134,35 @@ export async function fetch_single_listing() {
                     <button type="submit" class="btn mb-2 rounded-pill btn_submit_bid">Submit a bid</button>
                 </div>
             </div>
-        </form>
-    </div>`;
+        </form>`;
 
-    // Bid history
-    if (bid_history_container) {
-        if (listingDetail.data.bids.length === 0) {
-            bid_history_container.innerHTML = '<div class="text-center">No bids yet</div>';
-        } else {
-            let bidHistoryHTML = ''; // Initialize the string for accumulating HTML
+        // To show Bid history
+        if (bid_history_container) {
+            if (listingDetail.data.bids.length === 0) {
+                bid_history_container.innerHTML = '<div class="text-center">No bids yet</div>';
+            } else {
+                let bidHistoryHTML = ''; // Initialize the string for accumulating HTML
 
-            // Iterate over each bid in the bids array
-            listingDetail.data.bids.forEach(bid => {
-                const bidderName = bid.bidder.name;
-                const bidAmount = bid.amount;
+                // Iterate over each bid in the bids array
+                listingDetail.data.bids.forEach(bid => {
+                    const bidderName = bid.bidder.name;
+                    const bidAmount = bid.amount;
 
-                // Append each bid's HTML to the bidHistoryHTML string
-                bidHistoryHTML += `
+                    // Append each bid's HTML to the bidHistoryHTML string
+                    bidHistoryHTML += `
             <div class="row row-cols-2 pt-3 bid_history_row">
                 <div class="col pt-2 bid_history_col rounded-start text-start"><h6>${bidderName}</h6></div>
                 <div class="col pt-2 bid_history_col rounded-end text-end"><h6>${bidAmount}</h6></div>
             </div>`;
-            });
+                });
 
-            // Set the accumulated HTML to the container
-            bid_history_container.innerHTML = bidHistoryHTML;
+                // Set the accumulated HTML to the container
+                bid_history_container.innerHTML = bidHistoryHTML;
+            }
+        } else {
+            console.error('Bid history container not found');
         }
-    } else {
-        console.error('Bid history container not found');
     }
+
 }
 fetch_single_listing();
-
-
-
