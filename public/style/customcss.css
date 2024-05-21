@@ -224,6 +224,10 @@ h2 {
         padding-bottom: 20px !important;
     }
 
+    .card_row {
+        margin-left: 3.5% !important;
+    }
+
     .all_auctions_link {
         margin-left: 60%;
     }

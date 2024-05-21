@@ -3,7 +3,7 @@
 }
 
 .main_container {
-    margin-top: 10%;
+
     background-color: #EAECCC;
 }
 
@@ -22,7 +22,15 @@
 }
 
 h6 {
-    color: #272829;
+    color: gray;
+}
+
+.sub_navigation {
+    margin-top: 10%;
+    background-color: #C3E2C2;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
 }
 
 /* -------------------MEDIA QUERY-----------------------*/
