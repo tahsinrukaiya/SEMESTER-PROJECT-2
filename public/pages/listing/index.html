@@ -12,6 +12,7 @@
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="module" src="/src/JS/listings/listings.mjs"></script>
     <script type="module" src="/src/JS/logout.mjs"></script>
+    <script type="module" src="/src/JS/search.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
     <link rel="stylesheet" href="/public/style/listing.css">
@@ -63,10 +64,11 @@
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <form class="d-flex mt-3 mx-3 search_form" role="search">
-                <input class="form-control form-control-sm me-2 rounded-5 search_input" type="search"
+            <form class="d-flex mt-3 mx-3 search_form" id="search_form" role="search">
+                <input class="form-control form-control-sm me-2 rounded-5 search_input" id="search_input" type="search"
                     placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary rounded-5 btn-sm mx-2 btn_search" type="submit">Search</button>
+                <button class="btn btn-outline-primary rounded-5 btn-sm mx-2 btn_search" id="search_btn"
+                    type="submit">Search</button>
             </form>
         </div>
     </nav>

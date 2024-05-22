@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="module" src="/src/JS/listings/single_listing.mjs"></script>
+    <script type="module" src="/src/JS/listings/place_bid.mjs"></script>
     <script type="module" src="/src/JS/logout.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
@@ -115,24 +116,21 @@
                     <div class="col">
                         <h6 class="text text-end border-bottom  mx-5 pb-2">Jon Grosland</h6>
                     </div>
-                </div>
-                <form class="bid_form mt-5">
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control rounded-pill bid_input" placeholder="bid">
-                        </div>
-                        <div class="col">
-                            <button type="submit" class="btn mb-2 rounded-pill btn_submit_bid">Submit a bid</button>
-                        </div>
+                </div>    
+            </div>-->
+            <form class="bid_form mt-5" id="bid_form">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control rounded-pill bid_input" id="bid_input" placeholder="bid">
                     </div>
-                </form>
-
-            </div>
-       
-        </div> -->
+                    <div class="col">
+                        <button type="submit" class="btn mb-2 rounded-pill btn_submit_bid">Submit a bid</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
-        <h3 class="text-center mt-5 pt-5">Bid History</h3>
+        <h3 class="text-center mt-5">Bid History</h3>
         <div class="container mt-5 mb-5 pb-5 pt-4 bid_history_container" id="bid_history_container">
 
             <!----<div class="row row-cols-2 mt-5 bid_history_row ">

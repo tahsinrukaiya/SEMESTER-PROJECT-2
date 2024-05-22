@@ -117,15 +117,17 @@ export async function fetch_single_listing() {
                 <h6 class="text text-start mx-5 pb-1">Seller</h6>
             </div>
             <div class="col">
-                <h6 class="text text-end mx-5 pb-1">${seller.name}</h6>
+                <h6 class="text text-end mx-5 pb-2">${seller.name}</h6>
             </div>
         </div>
+       <a href="../logIn/index.html" id="loginPrompt" class="link_login"><h6 class = "text text-center mt-5 mb-5 text_link">To place a bid and view bid history, please log in</h6></a>
     </div>`;
 
     // Only show the bid form if the user is logged in
     if (isUserLoggedIn()) {
+        loginPrompt.style.display = 'none';
         card_container.innerHTML += `
-        <form class="bid_form mt-5">
+        <form class="bid_form mt-5" id="bid_form">
             <div class="row">
                 <div class="col">
                     <input type="text" class="form-control rounded-pill bid_input" placeholder="bid">

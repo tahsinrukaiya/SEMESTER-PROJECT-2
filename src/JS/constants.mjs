@@ -7,4 +7,5 @@ export const API_LOGIN = "/login";
 export const API_ALL_LISTINGS = "/auction/listings";
 export const API_SINGLE_LISTING = "/auction/listings/";
 export const API_CREATE_LISTING = "/auction/listings";
+export const API_BID = "/auction/listings/<id>/bids";
 
