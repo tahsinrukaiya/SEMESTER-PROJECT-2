@@ -105,9 +105,22 @@ h6 {
 /* -------------------MEDIA QUERY-----------------------*/
 @media only screen and (min-width: 375px) and (max-width:853px) {
     .main_container {
-        margin-top: 30%;
         padding-bottom: 10%;
+        background-color: #EAECCC;
     }
+
+    .sub_navigation {
+        background-color: #C3E2C2;
+        width: 100%;
+        height: 35px;
+        margin-top: 50%;
+        padding-bottom: 5px;
+    }
+
+    .sub_text {
+        font-size: 13px;
+    }
+
 
     .bid_form {
         margin-left: 4.3% !important;
