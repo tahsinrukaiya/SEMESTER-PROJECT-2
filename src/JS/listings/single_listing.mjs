@@ -3,7 +3,7 @@ import { API_SINGLE_LISTING } from "../constants.mjs";
 import { formatDate } from "../date_format.mjs";
 import { loadStorage } from '../storage/local_storage.mjs';
 
-function getListingIdFromQuery() {
+export function getListingIdFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("id");
 }
@@ -52,6 +52,7 @@ export async function fetch_single_listing() {
     }
 
     const listingDetail = await response.json();
+    console.log(listingDetail);
     const main_container = document.getElementById('main_container');
     const card_container = document.getElementById('card_container');
     const product_detail = document.getElementById('product_detail');
