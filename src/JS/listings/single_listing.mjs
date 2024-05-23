@@ -131,10 +131,10 @@ export async function fetch_single_listing() {
         <form class="bid_form mt-5" id="bid_form">
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control rounded-pill bid_input" placeholder="bid">
+                    <input type="text" class="form-control rounded-pill bid_input" id="bid_input" placeholder="enter your bid">
                 </div>
                 <div class="col">
-                    <button type="submit" class="btn mb-2 rounded-pill btn_submit_bid">Submit a bid</button>
+                    <button type="submit" class="btn mb-2 rounded-pill btn_submit_bid" id="btn_submit_bid">Submit a bid</button>
                 </div>
             </div>
         </form>`;
