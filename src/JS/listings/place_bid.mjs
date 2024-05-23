@@ -107,6 +107,10 @@ bid_form.addEventListener("submit", async (event) => {
                 console.error('Fetch error:', error);
             }
         }
+        place_bid();
     });
+
 });
+
+
 
