@@ -10,10 +10,11 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/src/JS/profile/user_profile.mjs"></script>
     <script type="module" src="/src/JS/logout.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
-    <link rel="stylesheet" href="/public/style/profile.css">
+    <link rel="stylesheet" href="/public/style/user_profile.css">
     <link rel="preconnect" href="/https://fonts.googleapis.com">
     <link rel="preconnect" href="/https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -71,31 +72,27 @@
     </nav>
 
 
-
-
-
     <div class="container-fluid sub_navigation">
         <h6 class="text text-center pt-2">PedalPulse Auctions > Your Profile</h6>
     </div>
 
     <!------------------------PROFILE VIEW----------------->
 
-    <div class="container main_container">
+    <div class="container main_container" id="main_container">
         <div class="row pb-5">
             <div class="col">
-                <h3 class="text-center mt-5">Your Profile</h3>
+                <h3 class="text-center mt-5">Profile</h3>
                 <div class="card mt-5 text-center profile_card">
-                    <img class="card-img-top" src="/public/assets/user (3).png" alt="Card image cap">
+                    <img class="card-img-top" src="" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Ashwin</h5>
-                        <p class="card-text">ashwin@noroff.no</p>
-                        <a href="#" class="btn rounded-pill profile_edit">Edit Profile</a>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn rounded-pill profile_edit" id="profile_edit"></a>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <h3 class="text-center mt-5 "> Your Listing</h3>
-
+            <div class="col listing_col" id="listing_col">
+                <h3 class="text-center mt-5"> Your Listing</h3>
                 <h6 class="listing_text">Ongoing:</h6>
                 <h6 class="listing_text"> Won:</h6>
                 <h6 class="listing_text"> Ended:</h6>

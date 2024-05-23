@@ -3,7 +3,6 @@
 }
 
 .main_container {
-
     background-color: #EAECCC;
 }
 
@@ -16,21 +15,25 @@
     margin-left: 20%;
 }
 
-.listing_text {
-    margin-top: 10%;
-    color: #272829;
-}
-
-h6 {
-    color: gray;
-}
-
 .sub_navigation {
     margin-top: 10%;
     background-color: #C3E2C2;
     width: 100%;
     height: 40px;
     font-size: 18px;
+}
+
+.profile_photo {
+    height: 200px;
+    width: 200px;
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-bottom: 7%;
+}
+
+.listing_text {
+    margin-top: 10%;
+    color: #272829;
 }
 
 /* -------------------MEDIA QUERY-----------------------*/
@@ -43,10 +46,33 @@ h6 {
         margin-left: 10% !important;
     }
 
-    .listing_text {
-        margin-left: 10%;
+    .profile_photo {
+        height: 75px;
+        width: 75px;
+        margin-left: 25%;
+        margin-top: 15%;
+        margin-bottom: 7%;
     }
 
+    .listing_text {
+        margin-top: 30%;
+        color: #272829;
+        font-size: 13px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .profile_edit {
+        font-size: 13px;
+        line-height: 10px;
+    }
+
+    .card-title,
+    .card-text {
+        font-size: 13px;
+    }
 
 
 }

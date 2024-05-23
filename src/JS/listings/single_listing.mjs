@@ -2,6 +2,7 @@ import { API_BASE } from "../constants.mjs";
 import { API_SINGLE_LISTING } from "../constants.mjs";
 import { formatDate } from "../date_format.mjs";
 import { loadStorage } from '../storage/local_storage.mjs';
+import { sendBid } from "./place_bid.mjs";
 
 export function getListingIdFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -138,6 +139,7 @@ export async function fetch_single_listing() {
                 </div>
             </div>
         </form>`;
+        sendBid();
 
         // To show Bid history
         if (bid_history_container) {
