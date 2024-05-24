@@ -56,7 +56,8 @@ export function sendBid() {
                 if (!bidResponse.ok) {
                     throw new Error(`Bid placement failed: ${bidResponse.statusText}`);
                 }
-
+                // Alert the user that the bid has been placed successfully
+                alert("Your bid has been placed successfully!");
                 // Fetch the updated listing details including bids
                 const listingResponse = await fetch(listingUrl, {
                     method: "GET",
