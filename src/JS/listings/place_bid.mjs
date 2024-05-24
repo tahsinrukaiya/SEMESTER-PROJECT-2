@@ -1,8 +1,6 @@
-import { API_BASE } from "../constants.mjs";
-import { API_BID } from "../constants.mjs";
+import { API_BASE, API_BID, API_KEY, API_SINGLE_LISTING } from "../constants.mjs";
 import { loadStorage } from "../storage/local_storage.mjs";
 import { getListingIdFromQuery } from "./single_listing.mjs";
-import { API_KEY } from "../constants.mjs";
 
 export function sendBid() {
     const bid_form = document.getElementById("bid_form");
@@ -23,8 +21,6 @@ export function sendBid() {
         }
 
         const token = loadStorage("token");
-
-        // Retrieve logged-in user's name
         const loggedInUserName = getUserNameFromLocalStorage();
 
         async function place_bid() {
@@ -42,45 +38,52 @@ export function sendBid() {
                 return;
             }
 
-            // Defining optional query parameters
-            const queryParams = {
-                _seller: true,
-                _bids: true,
-            };
-
-            // Including the query parameters in the URL
-            const url = `${API_BASE}${API_BID}${listingId}/bids`;
-            console.log("Request URL:", url);
+            const bidUrl = `${API_BASE}${API_BID}${listingId}/bids`;
+            const listingUrl = `${API_BASE}${API_SINGLE_LISTING}${listingId}?_seller=true&_bids=true`;
 
             try {
-                const response = await fetch(url, {
+                // Place the bid
+                const bidResponse = await fetch(bidUrl, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,
                         "X-Noroff-API-Key": API_KEY,
                     },
-                    body: JSON.stringify({ amount: bid }), // Sending the bid amount in the request body
+                    body: JSON.stringify({ amount: bid }),
                 });
 
-                const updatedListingDetail = await response.json();
-                console.log(updatedListingDetail);
+                if (!bidResponse.ok) {
+                    throw new Error(`Bid placement failed: ${bidResponse.statusText}`);
+                }
+
+                // Fetch the updated listing details including bids
+                const listingResponse = await fetch(listingUrl, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                        "X-Noroff-API-Key": API_KEY,
+                    },
+                });
+
+                if (!listingResponse.ok) {
+                    throw new Error(`Fetching listing details failed: ${listingResponse.statusText}`);
+                }
+
+                const updatedListingDetail = await listingResponse.json();
                 console.log("Listing Detail:", updatedListingDetail);
 
-                // To show Bid history
                 if (bid_history_container) {
-                    if (updatedListingDetail.data.bids === 0) {
-                        bid_history_container.innerHTML =
-                            '<div class="text-center">No bids yet</div>';
+                    if (updatedListingDetail.data.bids.length === 0) {
+                        bid_history_container.innerHTML = '<div class="text-center">No bids yet</div>';
                     } else {
-                        let bidHistoryHTML = ""; // Initialize the string for accumulating HTML
+                        let bidHistoryHTML = "";
 
-                        // Iterate over each bid in the bids array
                         updatedListingDetail.data.bids.forEach((bid) => {
                             const bidderName = bid.bidder.name;
                             const bidAmount = bid.amount;
 
-                            // Append each bid's HTML to the bidHistoryHTML string
                             bidHistoryHTML += `
                               <div class="row row-cols-2 pt-3 bid_history_row">
                                   <div class="col pt-2 bid_history_col rounded-start text-start"><h6>${bidderName}</h6></div>
@@ -88,12 +91,8 @@ export function sendBid() {
                               </div>`;
                         });
 
-                        // Set the accumulated HTML to the container
                         bid_history_container.innerHTML = bidHistoryHTML;
                     }
-                    // Reload the page after updating the bid history
-                    window.location.reload();
-
                 } else {
                     console.error("Bid history container not found");
                 }
@@ -101,6 +100,7 @@ export function sendBid() {
                 console.error("Fetch error:", error);
             }
         }
+
         place_bid();
     });
 }
