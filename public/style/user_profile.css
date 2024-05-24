@@ -60,13 +60,13 @@
     }
 
     .profile_card {
-        margin-right: 25%;
+        margin-right: 10%;
     }
 
     .profile_photo {
-        height: 80px;
-        width: 80px;
-        margin-left: 33%;
+        height: 100px;
+        width: 100px;
+        margin-left: 30%;
         margin-top: 15%;
         margin-bottom: 7%;
     }
@@ -94,6 +94,12 @@
     .listing_col {
         display: none;
     }
+
+    .update_profile {
+        width: 50%;
+        margin-left: 25%;
+    }
+
 
 
 }
