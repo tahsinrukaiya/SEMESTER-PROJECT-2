@@ -10,7 +10,11 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <script type="module" src="/src/JS/profile/user_profile.mjs"></script>
+    <script type="module" src="/src/JS/profile/update_profile.mjs"></script>
     <script type="module" src="/src/JS/logout.mjs"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <link rel="stylesheet" href="/public/style/customcss.css">
@@ -56,7 +60,7 @@
             <a class="navbar-brand mx-3 px-2" href="/index.html">
                 <h3 class="logo"><span class="logo_first_part">PedalPulse</span>Auctions</h3>
             </a>
-            <a class="login" href="#"><i class="fa-regular fa-user"></i></a>
+            <a class="login" href="/public/pages/logIn/index.html"><i class="fa-regular fa-user"></i></a>
             <a class="logout" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"
                     id="log_out_icon"></i></a>
             <button class="navbar-toggler hum_menu" type="button" data-bs-toggle="offcanvas"
@@ -83,9 +87,13 @@
             <div class="col">
                 <h3 class="text-center mt-5">Profile</h3>
                 <div class="card mt-5 text-center profile_card">
-                    <img class="card-img-top" src="" alt="Card image cap">
-                     <a href="#" class="edit_avatar" id="edit_avatar">
-                    <button type="button" class="btn btn-sm rounded-pill">Edit avatar</button>
+                    <img class="card-img-top" src="" alt="Card image cap">-->
+        <button type="button" class="btn btn-primary rounded-pill update_profile" id="update_profile"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Update Profile
+        </button>
+        <!----<a href="#" class="edit_avatar" id="edit_avatar">
+                    <button type="button" class="btn btn-sm rounded-pill">Update Profile</button>
                     </a>
                     <div class="card-body">
                         <h5 class="card-title"></h5>
@@ -102,23 +110,30 @@
 
             </div>
         </div>-->
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="update_Profile_Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Change your avatar</h5>
+                        <button type="button" class="btn-close rounded-pill" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="update_profile_form" id="update_profile_form">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Avatar url</label>
+                                <input type="url" class="form-control rounded-pill avatar_input" id="avatar_input" />
+                            </div>
+                            <button type="submit" class="btn btn-primary rounded-pill">Update Avatar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!------------------------FOOTER------------------>
 

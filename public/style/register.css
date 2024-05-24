@@ -11,6 +11,7 @@
     padding-top: 5%;
     padding-top: 10%;
     padding-bottom: 3%;
+
 }
 
 .register_form {
@@ -39,7 +40,6 @@
 /* -------------------MEDIA QUERY-----------------------*/
 @media only screen and (max-width:853px) {
     .register_form {
-        margin-top: 20% !important;
         width: 90%;
         margin-left: 4%;
     }
@@ -49,7 +49,7 @@
     }
 
     .register_form_container {
-        padding-top: 10% !important;
+        margin-top: 50%;
     }
 
     .user_name_input,

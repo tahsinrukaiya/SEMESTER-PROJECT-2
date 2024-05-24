@@ -36,12 +36,15 @@
     color: #272829;
 }
 
-.update_avatar {
+.update_profile {
     color: #272829;
+    background-color: white;
     border-color: #098666;
+    width: 40%;
+    margin-left: 30%;
 }
 
-.update_avatar:hover {
+.update_profile:hover {
     color: white;
     background-color: #098666;
 }
