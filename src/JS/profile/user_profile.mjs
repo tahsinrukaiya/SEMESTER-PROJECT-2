@@ -1,6 +1,6 @@
 import { API_BASE } from "../constants.mjs";
 import { API_PROFILE } from "../constants.mjs";
-import { loadStorage } from "../storage/local_storage.mjs"
+import { loadStorage } from "../storage/local_storage.mjs";
 import { API_KEY } from "../constants.mjs";
 
 const main_container = document.getElementById('main_container');
@@ -15,23 +15,27 @@ export async function get_profile_data() {
         const userAvatar = userProfile.userAvatar;
         const token = JSON.parse(localStorage.getItem('token'));
 
+        if (!token) {
+            main_container.innerHTML = `<p>No logged in user found</p>`;
+            return;
+        }
+
         try {
-            const response = await fetch((`${API_BASE}${API_PROFILE}${userName}?_listings=true&_wins=true`), {
+            const response = await fetch(`${API_BASE}${API_PROFILE}${userName}?_listings=true&_wins=true`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
                     "X-Noroff-API-Key": API_KEY
                 },
-
             });
+
             if (!response.ok) {
-                //more details about the error returned by the server
+                // More details about the error returned by the server
                 const errorText = await response.text();
                 console.error("Error from server:", errorText);
                 throw new Error("Network Issue");
-            }
-            else {
+            } else {
                 console.log("Profile data loading successful!");
             }
 
@@ -84,13 +88,12 @@ export async function get_profile_data() {
         </div>     
         `;
 
-        }
-
-        catch (error) {
+        } catch (error) {
             console.log(error);
         }
+    } else {
+        main_container.innerHTML = `<p>No logged in user found</p>`;
     }
 }
 
 get_profile_data();
-
