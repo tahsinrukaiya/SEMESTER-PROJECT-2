@@ -9,9 +9,7 @@ export function sendBid() {
     bid_form.addEventListener("submit", async (event) => {
         event.preventDefault();
         const bid_input = document.getElementById("bid_input");
-        const bid_history_container = document.getElementById(
-            "bid_history_container"
-        );
+        const bid_history_container = document.getElementById("bid_history_container");
 
         // Function to get the userName from local storage
         function getUserNameFromLocalStorage() {
@@ -36,15 +34,7 @@ export function sendBid() {
                 console.error("Listing ID not provided in the URL");
                 return;
             }
-
-            //   const listingSellerName = listingDetail.data.seller.name;
-            //   if (listingSellerName === loggedInUserName) {
-            //     console.error("You cannot place a bid on your own listing");
-            //     return;
-            //   }
-
             const bidAmount = bid_input.value;
-
             const bid = parseFloat(bid_input.value);
 
             if (!bidAmount) {
@@ -79,7 +69,7 @@ export function sendBid() {
 
                 // To show Bid history
                 if (bid_history_container) {
-                    if (updatedListingDetail.data.bids.length === 0) {
+                    if (updatedListingDetail.data.bids === 0) {
                         bid_history_container.innerHTML =
                             '<div class="text-center">No bids yet</div>';
                     } else {
@@ -100,8 +90,10 @@ export function sendBid() {
 
                         // Set the accumulated HTML to the container
                         bid_history_container.innerHTML = bidHistoryHTML;
-
                     }
+                    // Reload the page after updating the bid history
+                    window.location.reload();
+
                 } else {
                     console.error("Bid history container not found");
                 }
