@@ -25,12 +25,14 @@ h6 {
     padding-top: 5%;
     padding-bottom: 5%;
     background-color: #EAECCC;
+
 }
 
 .form_container {
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
     background-color: white;
+    width: 70%;
 }
 
 #create_listing_btn {
@@ -48,6 +50,11 @@ h6 {
     .main_container {
         margin-top: 0;
         padding-top: 0;
+    }
+
+    .form_container {
+        width: 80%;
+        padding-bottom: 10%;
     }
 
     .sub_navigation {

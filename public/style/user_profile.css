@@ -57,6 +57,26 @@
     margin-right: 18%;
 }
 
+.modal-title {
+    color: #272829;
+}
+
+.url {
+    color: #272829;
+    font-size: 20px;
+}
+
+.update_avatar_btn {
+    color: #272829;
+    border-color: #098666;
+    background-color: white;
+}
+
+.update_avatar_btn:hover {
+    color: white;
+    background-color: #098666;
+}
+
 /* -------------------MEDIA QUERY-----------------------*/
 @media only screen and (min-width: 375px) and (max-width:853px) {
     .main_container {

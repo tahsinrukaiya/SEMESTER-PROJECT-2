@@ -66,7 +66,7 @@ export async function get_profile_data() {
                 <h6 class="listing_text">Credits: </h6>
             </div>
         </div>   
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="update_profile_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -77,10 +77,10 @@ export async function get_profile_data() {
                     <div class="modal-body">
                         <form class="update_profile_form" id="update_profile_form">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Avatar url</label>
+                                <label for="exampleInputEmail1" class="form-label url">Avatar url</label>
                                 <input type="url" class="form-control rounded-pill avatar_input" id="avatar_input" />
                             </div>
-                            <button type="submit" class="btn btn-primary rounded-pill">Update Avatar</button>
+                            <button type="submit" class="btn rounded-pill border update_avatar_btn">Update Avatar</button>
                         </form>
                     </div>
                 </div>
