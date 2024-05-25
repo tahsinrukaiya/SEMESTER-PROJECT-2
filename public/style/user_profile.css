@@ -85,6 +85,7 @@
 
     .profile_card {
         margin-right: 10%;
+        margin-top: 0;
     }
 
     .profile_photo {
@@ -122,6 +123,10 @@
     .update_profile {
         width: 50%;
         margin-left: 25%;
+    }
+
+    .heading {
+        margin-left: 20%;
     }
 
 
