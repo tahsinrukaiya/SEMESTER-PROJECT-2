@@ -47,7 +47,7 @@ export async function get_profile_data() {
                 <div class="card mt-5 text-center profile_card">
                     <img class="card-img-top rounded-pill profile_photo" src="${profile_data.data.avatar.url}" alt="${profile_data.data.avatar.alt}">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary rounded-pill update_profile" id="update_profile" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-primary rounded-pill update_profile" id="update_profile" data-bs-toggle="modal" data-bs-target="#update_profile_modal">
                      Update Profile
                     </button>
                     <div class="card-body">

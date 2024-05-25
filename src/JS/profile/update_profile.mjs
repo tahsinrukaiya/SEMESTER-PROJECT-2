@@ -17,6 +17,7 @@ function addUpdateProfileListener(user_name, token) {
         event.preventDefault();
 
         const avatar_url = document.getElementById('avatar_input').value;
+        console.log(avatar_url);
 
         if (!avatar_url) {
             console.error("Avatar URL input is empty");
@@ -78,7 +79,7 @@ export async function initializeProfileUpdate() {
             <div class="col">
                 <h3 class="text-center mt-5 heading">Profile</h3>
                 <div class="card mt-5 text-center profile_card" id="profile_card">
-                    <img class="card-img-top rounded-pill profile_photo" src="${userProfile.userAvatar}" alt="Card image cap">
+                    <img class="card-img-top rounded-pill profile_photo" src="${userProfile.userAvatar.url}" alt="${userProfile.userAvatar.altText}">
                     <button type="button" class="btn btn-primary rounded-pill update_profile" id="update_profile" data-bs-toggle="modal" data-bs-target="#update_Profile_Modal">
                         Update Profile
                     </button>

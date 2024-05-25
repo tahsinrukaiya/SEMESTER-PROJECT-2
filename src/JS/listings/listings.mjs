@@ -7,7 +7,6 @@ const card_row = document.getElementById('card_row');
 const card_column = document.getElementById('card_column');
 const card = document.getElementById('cards');
 
-
 async function fetch_all_listings(url) {
     try {
         const getData = {
@@ -24,14 +23,18 @@ async function fetch_all_listings(url) {
         for (let i = 0; i < listings.data.length; i++) {
             const media = listings.data[i].media;
             let mediaHTML = '';
+
+            // Check if the listing contains media
             if (media && media.length > 0) {
+                // Iterate through each media item
                 for (let j = 0; j < media.length; j++) {
-                    mediaHTML = `<img src="${media[j].url}" class="card-img-top mt-3 px-3 pb-3" alt="...">`;
+                    mediaHTML += `<img src="${media[j].url}" class="card-img-top mt-3 px-3 pb-3" alt="...">`;
                 }
             }
+
             const formattedDate = formatDate(listings.data[i].endsAt);
             card_row.innerHTML += `
-                    <div class="col-lg pt-3 pb-4 card_column">
+                <div class="col-lg pt-3 pb-4 card_column">
                     <a href="single_listing.html?id=${listings.data[i].id}">
                         <div class="card cards">
                            ${mediaHTML}
@@ -46,11 +49,9 @@ async function fetch_all_listings(url) {
                     </div>
                 </div>`;
         }
-    }
-    catch (error) {
+    } catch (error) {
         console.log(error);
     }
 }
 
 fetch_all_listings(`${API_BASE}${API_ALL_LISTINGS}?sort=created`);
-
