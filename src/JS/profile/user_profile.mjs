@@ -75,13 +75,14 @@ export async function get_profile_data() {
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="update_profile_form" id="update_profile_form">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label url">Avatar url</label>
-                                <input type="url" class="form-control rounded-pill avatar_input" id="avatar_input" />
-                            </div>
-                            <button type="submit" class="btn rounded-pill border update_avatar_btn">Update Avatar</button>
-                        </form>
+                    <form class="update_profile_form" id="update_profile_form">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label url">Avatar url</label>
+                        <input type="url" class="form-control rounded-pill avatar_input" id="avatar_input" />
+                    </div>
+                    <button type="submit" class="btn rounded-pill  border update_avatar_btn">Update
+                        Avatar</button>
+                </form>
                     </div>
                 </div>
             </div>
