@@ -33,7 +33,7 @@ create_listing_form.addEventListener("submit", async (event) => {
         tags: listing_tags.value.split(',').map(tag => tag.trim()), // Split tags by comma and trim whitespace
         media: [{
             url: listing_media.value,
-            alt: listing_title.value // You might want to change this to a more appropriate alt text
+            alt: listing_title.value
         }],
         endsAt: new Date(listing_end_date.value).toISOString() // Convert date to ISO string
     };

@@ -42,7 +42,7 @@ search_form.addEventListener('submit', function (event) {
                 }
                 const formattedDate = formatDate(listing.endsAt);
 
-                // Check if the search term is present in the title of the post
+                // Check if the search term is present in the title of the listings
                 const searchTermFound = listing.title.toLowerCase().includes(searchTerm);
                 console.log(`Title: ${listing.title}, Search term found: ${searchTermFound}`);
 
