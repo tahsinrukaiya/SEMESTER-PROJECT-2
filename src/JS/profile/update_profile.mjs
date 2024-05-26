@@ -79,8 +79,17 @@ async function updateProfile(userName, updatedProfile, token) {
             const errorText = await response.text();
             console.error("Error from server:", errorText);
             throw new Error("Network Issue");
-        } else {
+        }
+        else {
             console.log("Profile update successful!");
+            // Updating userProfile object
+            userProfile.userAvatar.url = updatedProfile.avatar;
+
+            // Save updated avatar URL to local storage
+            localStorage.setItem('userProfile', JSON.stringify(userProfile));
+            console.log("Updated userProfile saved to local storage");
+
+
             const main_container = document.getElementById('main_container');
             main_container.innerHTML = `
                 <div class="row pb-5">
