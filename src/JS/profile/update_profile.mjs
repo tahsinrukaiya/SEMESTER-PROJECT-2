@@ -1,62 +1,63 @@
 import { API_BASE, API_UPDATE_PROFILE, API_KEY } from "../constants.mjs";
 import { userProfile } from "./user_profile.mjs";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const { userName, userAvatar, userEmail, credits, listings, wins } = userProfile;
-    console.log("User Avatar URL:", userAvatar.url);
 
-    // Ensure the input field is populated with the current avatar URL when the modal is shown
-    const updateProfileModal = document.getElementById('update_profile_modal');
-    if (updateProfileModal) {
-        updateProfileModal.addEventListener('show.bs.modal', () => {
-            const avatarInput = document.getElementById('avatar_input');
-            if (avatarInput) {
-                avatarInput.value = userAvatar.url;
-                console.log(`Set avatar URL to: ${userAvatar.url}`);
-            } else {
-                console.error("Avatar input field not found");
-            }
-        });
-    } else {
-        console.error("Update profile modal not found");
-    }
+//Reconstructing the userProfile object
+const { userName, userAvatar, userEmail, credits, listings, wins } = userProfile;
+console.log("User Avatar URL:", userAvatar.url);
 
-    // Reference to update_profile_form
-    const update_profile_form = document.getElementById('update_profile_form');
-    if (update_profile_form) {
-        console.log("Update profile form found");
+// Ensure the input field is populated with the current avatar URL when the modal is shown
+const updateProfileModal = document.getElementById('update_profile_modal');
+if (updateProfileModal) {
+    updateProfileModal.addEventListener('show.bs.modal', () => {
+        const avatarInput = document.getElementById('avatar_input');
+        if (avatarInput) {
+            avatarInput.value = userAvatar.url;
+            console.log(`Set avatar URL to: ${userAvatar.url}`);
+        } else {
+            console.error("Avatar input field not found");
+        }
+    });
+} else {
+    console.error("Update profile modal not found");
+}
 
-        // Retrieve the access token from local storage
-        const token = JSON.parse(localStorage.getItem('token'));
-        console.log(token);
+// Reference to update_profile_form
+const update_profile_form = document.getElementById('update_profile_form');
+if (update_profile_form) {
+    console.log("Update profile form found");
 
-        update_profile_form.addEventListener("submit", (event) => {
-            event.preventDefault();
+    // Retrieve the access token from local storage
+    const token = JSON.parse(localStorage.getItem('token'));
+    console.log(token);
 
-            const avatarInput = document.getElementById('avatar_input');
-            if (!avatarInput) {
-                console.error("Avatar input field not found during form submission");
-                return;
-            }
+    update_profile_form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-            // User updated inputs from the form
-            const updatedProfile = {
-                avatar: avatarInput.value,
-            };
-            console.log("Updated profile:", updatedProfile);
+        const avatarInput = document.getElementById('avatar_input');
+        if (!avatarInput) {
+            console.error("Avatar input field not found during form submission");
+            return;
+        }
 
-            // Call the function to update the profile
-            updateProfile(userName, updatedProfile, token);
-        });
-    } else {
-        console.error("Update profile form not found");
-    }
-});
+        // User updated inputs from the form
+        const updatedProfile = {
+            avatar: avatarInput.value,
+        };
+        console.log("Updated profile:", updatedProfile);
+
+        // Call the function to update the profile
+        updateProfile(userName, updatedProfile, token);
+    });
+} else {
+    console.error("Update profile form not found");
+}
+
 
 
 async function updateProfile(userName, updatedProfile, token) {
     // Constructing the api url and log it for debugging
-    const apiUrl = `${API_BASE}/auction/profiles/${userName}`;
+    const apiUrl = `${API_BASE}${API_UPDATE_PROFILE}${userName}`;
     console.log("API URL:", apiUrl);
 
     //API call here with access token
