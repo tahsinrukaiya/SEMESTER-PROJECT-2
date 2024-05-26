@@ -59,9 +59,9 @@ if (update_profile_form) {
                     throw new Error("Network Issue");
                 } else {
                     console.log("Update avatar successful!");
-                    const updatedProfile = await response.json();
+                    // const updatedAvatar = await response.json();
                     // Construct the HTML content
-                    main_container.innerHTML = `  innerHTML to the container  `;
+                    main_container.innerHTML = `  innerHTML to the container will be handled later  `;
                 }
 
             }
