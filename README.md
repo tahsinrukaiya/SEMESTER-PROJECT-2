@@ -38,8 +38,7 @@ Clone the repository:
 
 sh
 Copy code
-git clone 
-cd auction-house
+git clone git@github.com:tahsinrukaiya/SEMESTER-PROJECT-2.git
 Install the dependencies:
 
 Usage
