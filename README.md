@@ -51,16 +51,20 @@ Profile Management: Visit your profile to view your credits, manage your listing
 
 
 Technologies Used
-Frontend: HTML, CSS, JavaScript
-Authentication: JWT (JSON Web Tokens)
+Frontend:
+HTML, CSS, JavaScript
+
+Authentication:
+JWT (JSON Web Tokens)
 API: RESTful API
 
 
 Contributing
+
 Feel free to contribute on the repository.Fork the repository
-Create a feature branch (git checkout -b feature/YourFeature)
-Commit your changes (git commit -m 'Add your feature')
-Push to the branch (git push origin feature/YourFeature)
+Create a feature branch,
+Commit your changes,
+Push to the branch, &
 Open a pull request
 
 Contact
